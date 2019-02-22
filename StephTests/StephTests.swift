@@ -2,8 +2,8 @@
 //  StephTests.swift
 //  StephTests
 //
-//  Created by Novare Account on 22/02/2019.
-//  Copyright © 2019 Novare Account. All rights reserved.
+//  Created by Hero on 22/02/2019.
+//  Copyright © 2019 Hero. All rights reserved.
 //
 
 import XCTest

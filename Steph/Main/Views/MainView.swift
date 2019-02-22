@@ -2,8 +2,8 @@
 //  MainView.swift
 //  Steph
 //
-//  Created by Novare Account on 22/02/2019.
-//  Copyright © 2019 Novare Account. All rights reserved.
+//  Created by Hero on 22/02/2019.
+//  Copyright © 2019 Hero. All rights reserved.
 //
 
 import UIKit
@@ -50,7 +50,7 @@ public final class MainView: UIView {
         view.axis = .horizontal
         view.distribution = UIStackView.Distribution.equalSpacing
         view.alignment = UIStackView.Alignment.center
-        view.spacing = 5.0
+        view.spacing = 2.0
         return view
     }()
     
