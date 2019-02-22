@@ -96,7 +96,8 @@ public final class MainView: UIView {
         
         self.stepsIndicatorStackView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview().offset(50.0)
-            make.width.equalTo(300.0)
+            make.leading.equalToSuperview().offset(50.0)
+            make.trailing.equalToSuperview().inset(50.0)
             make.height.equalTo(50.0)
             make.centerX.equalToSuperview()
         }
