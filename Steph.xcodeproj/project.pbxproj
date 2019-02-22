@@ -22,6 +22,7 @@
 		816B3B23221F9A2F00F55B12 /* Step3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B3B22221F9A2F00F55B12 /* Step3Cell.swift */; };
 		816B3B25221F9A4B00F55B12 /* Step4Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B3B24221F9A4B00F55B12 /* Step4Cell.swift */; };
 		816B3B28221F9B2600F55B12 /* CellStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B3B27221F9B2600F55B12 /* CellStep.swift */; };
+		816B3B39221FFB9A00F55B12 /* StepIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816B3B38221FFB9A00F55B12 /* StepIndicatorView.swift */; };
 		944DF75DC3F5D66AE923BB9C /* Pods_StephUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C18323FD9FB75724888BB7 /* Pods_StephUITests.framework */; };
 		DA781CAA127D2BD5CD8A2EA1 /* Pods_StephTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C70164087AAA0F8714BFF /* Pods_StephTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		816B3B22221F9A2F00F55B12 /* Step3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3Cell.swift; sourceTree = "<group>"; };
 		816B3B24221F9A4B00F55B12 /* Step4Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4Cell.swift; sourceTree = "<group>"; };
 		816B3B27221F9B2600F55B12 /* CellStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStep.swift; sourceTree = "<group>"; };
+		816B3B38221FFB9A00F55B12 /* StepIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepIndicatorView.swift; sourceTree = "<group>"; };
 		91B43F1E487F25C0B9DD3441 /* Pods-StephUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephUITests.release.xcconfig"; path = "Target Support Files/Pods-StephUITests/Pods-StephUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97B4515154617097E3EF771A /* Pods-Steph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steph.debug.xcconfig"; path = "Target Support Files/Pods-Steph/Pods-Steph.debug.xcconfig"; sourceTree = "<group>"; };
 		D6568930D023A78A33DC34CC /* Pods-StephTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephTests.release.xcconfig"; path = "Target Support Files/Pods-StephTests/Pods-StephTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				816B3B26221F9B1A00F55B12 /* Enums */,
 				816B3B1D221F96B400F55B12 /* Cells */,
 				816B3B14221F907600F55B12 /* MainView.swift */,
+				816B3B38221FFB9A00F55B12 /* StepIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				816B3B25221F9A4B00F55B12 /* Step4Cell.swift in Sources */,
 				816B3B21221F999000F55B12 /* Step2Cell.swift in Sources */,
 				816B3B28221F9B2600F55B12 /* CellStep.swift in Sources */,
+				816B3B39221FFB9A00F55B12 /* StepIndicatorView.swift in Sources */,
 				816B3B19221F940200F55B12 /* UIViewControllerExtension.swift in Sources */,
 				816B3AE6221F8DA500F55B12 /* MainVC.swift in Sources */,
 				816B3B15221F907600F55B12 /* MainView.swift in Sources */,

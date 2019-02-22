@@ -21,6 +21,8 @@ public final class MainVC: UIViewController {
     
     // MARK: LifeCycle Methods
     public override func loadView() {
+        super.loadView()
+        
         self.view = MainView()
     }
     
@@ -43,6 +45,7 @@ public final class MainVC: UIViewController {
         )
         
         self.currentVisibleSteps.append(1)
+        
     }
     
     // MARK: Instance Methods
@@ -56,9 +59,18 @@ public final class MainVC: UIViewController {
     // MARK: Computed Properties
 }
 
+// MARK: - Views
 extension MainVC {
     unowned var rootView: MainView { return self.view as! MainView }
     unowned var collectionView: UICollectionView { return self.rootView.collectionView }
+}
+
+// MARK: Target Action Methods
+extension MainVC {
+    
+    @objc func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension MainVC: UICollectionViewDataSource {
@@ -69,16 +81,16 @@ extension MainVC: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cellStep = CellStep(rawValue: indexPath.item) {
-        
+            
             switch cellStep {
             case .emailInput:
                 guard
                     let cell: Step1Cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: Step1Cell.identifier,
                         for: indexPath
-                    ) as? Step1Cell
+                        ) as? Step1Cell
                     
-                else { return UICollectionViewCell() }
+                    else { return UICollectionViewCell() }
                 return cell
                 
             case .mobileVerification:
@@ -137,7 +149,9 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
         
         self.currentPage = Int(offSet + horizontalCenter) / Int(width)
         print(self.currentPage)
-
+        
+        self.activateNextStepIndicator(index: self.currentPage)
+        
     }
     
     
@@ -158,6 +172,8 @@ extension MainVC {
         if self.currentPage + 1 != self.totalSteps.count {
             self.currentPage = self.currentPage + 1
             
+            self.activateNextStepIndicator(index: self.currentPage)
+            
             let indexPath: IndexPath = IndexPath(item: self.currentPage, section: 0)
             
             self.collectionView.scrollToItem(
@@ -170,13 +186,23 @@ extension MainVC {
 }
 
 // MARK: Helper Functions
-
 extension MainVC {
     
     private func validateForm(cellStep: Int) {
-        
         self.currentVisibleSteps.append(1)
         self.collectionView.reloadData()
+    }
+    
+    private func activateNextStepIndicator(index: Int) {
+        
+        let indicator = self.rootView.stepIndicatorsView[index]
+        
+        self.rootView.stepIndicatorsView.forEach { (step: StepIndicatorView) in
+            step.isCurrent(false)
+        }
+        
+        indicator.activate()
+        indicator.isCurrent(true)
         
     }
     
