@@ -42,15 +42,16 @@ public final class MainVC: UIViewController {
             for: UIControl.Event.touchUpInside
         )
         
-        self.currentSteps.append(1)
+        self.currentVisibleSteps.append(1)
     }
     
     // MARK: Instance Methods
     
     // MARK: Stored Properties
     private var stepCounter: Int = 1
-    private var currentSteps: [Int] = [Int]()
+    private var currentVisibleSteps: [Int] = [Int]()
     private var totalSteps: [Int] = [1,2,3,4]
+    private var currentPage: Int = 0
     
     // MARK: Computed Properties
 }
@@ -62,7 +63,7 @@ extension MainVC {
 
 extension MainVC: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.currentSteps.count
+        return self.currentVisibleSteps.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -129,6 +130,17 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
         
     }
     
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offSet = scrollView.contentOffset.x
+        let width = scrollView.frame.width
+        let horizontalCenter = width / 2
+        
+        self.currentPage = Int(offSet + horizontalCenter) / Int(width)
+        print(self.currentPage)
+
+    }
+    
+    
 }
 
 // MARK: Target Action Method
@@ -136,23 +148,36 @@ extension MainVC {
     
     @objc func nextButtonTapped() {
         
-        if self.currentSteps.count < CellStep.allCases.count {
+        if self.currentVisibleSteps.count < self.totalSteps.count {
             
-            self.currentSteps.append(1)
+            if self.currentPage + 1 == self.currentVisibleSteps.count {
+                self.validateForm(cellStep: self.currentPage + 1)
+            }
+        }
+        
+        if self.currentPage + 1 != self.totalSteps.count {
+            self.currentPage = self.currentPage + 1
             
-            self.collectionView.reloadData()
-            
-            let indexPath: IndexPath = IndexPath(item: self.stepCounter, section: 0)
+            let indexPath: IndexPath = IndexPath(item: self.currentPage, section: 0)
             
             self.collectionView.scrollToItem(
                 at: indexPath,
                 at: UICollectionView.ScrollPosition.right,
                 animated: true
             )
-            
-            self.stepCounter += 1
-            
-        }        
+        }
     }
 }
 
+// MARK: Helper Functions
+
+extension MainVC {
+    
+    private func validateForm(cellStep: Int) {
+        
+        self.currentVisibleSteps.append(1)
+        self.collectionView.reloadData()
+        
+    }
+    
+}
