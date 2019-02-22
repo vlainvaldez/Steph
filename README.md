@@ -1,2 +1,2 @@
 
-![alt text](https://giphy.com/gifs/25JTo4a02E1TN6bUrs)
+![alt text](https://github.com/vlainvaldez/Steph/blob/master/images/sample.gif)
