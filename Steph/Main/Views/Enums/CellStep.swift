@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum CellStep: Int{
+public enum CellStep: Int, CaseIterable{
     
     case emailInput = 0
     case mobileVerification

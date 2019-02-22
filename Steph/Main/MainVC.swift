@@ -35,15 +35,24 @@ public final class MainVC: UIViewController {
         self.collectionView.register(Step3Cell.self, forCellWithReuseIdentifier: Step3Cell.identifier)
         self.collectionView.register(Step4Cell.self, forCellWithReuseIdentifier: Step4Cell.identifier)
         
+        
+        self.rootView.nextStepButton.addTarget(
+            self,
+            action: #selector(MainVC.nextButtonTapped),
+            for: UIControl.Event.touchUpInside
+        )
+        
+        self.currentSteps.append(1)
     }
     
     // MARK: Instance Methods
     
     // MARK: Stored Properties
+    private var stepCounter: Int = 1
+    private var currentSteps: [Int] = [Int]()
+    private var totalSteps: [Int] = [1,2,3,4]
     
     // MARK: Computed Properties
-    
-
 }
 
 extension MainVC {
@@ -53,7 +62,7 @@ extension MainVC {
 
 extension MainVC: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return self.currentSteps.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -120,5 +129,30 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
         
     }
     
+}
+
+// MARK: Target Action Method
+extension MainVC {
+    
+    @objc func nextButtonTapped() {
+        
+        if self.currentSteps.count < CellStep.allCases.count {
+            
+            self.currentSteps.append(1)
+            
+            self.collectionView.reloadData()
+            
+            let indexPath: IndexPath = IndexPath(item: self.stepCounter, section: 0)
+            
+            self.collectionView.scrollToItem(
+                at: indexPath,
+                at: UICollectionView.ScrollPosition.right,
+                animated: true
+            )
+            
+            self.stepCounter += 1
+            
+        }        
+    }
 }
 
