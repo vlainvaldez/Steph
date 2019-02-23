@@ -41,8 +41,9 @@ public final class StepIndicatorView: UIView {
         
         self.subviews(forAutoLayout: [
             self.stepLabel, self.stepBarIndicator
-            ])
+        ])
         
+        self.activateConstraint()
     }
     
     // Instance Methods

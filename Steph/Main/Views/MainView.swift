@@ -54,6 +54,11 @@ public final class MainView: UIView {
         return view
     }()
     
+    public let stepIndicatorsContainer: UIView = {
+        let view: UIView = UIView()
+        return view
+    }()
+    
     public let step1Indicator: StepIndicatorView = {
         let view: StepIndicatorView = StepIndicatorView()
         view.stepLabel.text = "Step 01"
@@ -90,16 +95,21 @@ public final class MainView: UIView {
         self.backgroundColor = UIColor.white
         
         self.subviews(forAutoLayout: [
-            self.stepsIndicatorStackView,
+            self.stepIndicatorsContainer,
             self.collectionView, self.nextStepButton
-            ])
+        ])
         
-        self.stepsIndicatorStackView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+        self.stepIndicatorsContainer.subviews(forAutoLayout: [
+            self.step1Indicator, self.step2Indicator,
+            self.step3Indicator, self.step4Indicator
+        ])
+
+        
+        self.stepIndicatorsContainer.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview().offset(50.0)
-            make.leading.equalToSuperview().offset(50.0)
-            make.trailing.equalToSuperview().inset(50.0)
-            make.height.equalTo(50.0)
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(25.0)
+            make.trailing.equalToSuperview().inset(25.0)
+            make.height.equalTo(70.0)
         }
         
         self.collectionView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
@@ -114,6 +124,8 @@ public final class MainView: UIView {
             make.bottom.equalToSuperview().inset(30.0)
             make.centerX.equalToSuperview()
         }
+        
+        
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -123,27 +135,38 @@ public final class MainView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.populateStackView(stepsIndicator: self.stepIndicatorsView)
-        
         if let firstStepIndicator = self.stepIndicatorsView.first {
             firstStepIndicator.activate()
             firstStepIndicator.isCurrent(true)
         }
-    }
-}
-
-extension MainView {
-    
-    private func populateStackView(stepsIndicator: [StepIndicatorView]) {
         
-        let indicatorWidth: CGFloat  = self.stepsIndicatorStackView.frame.width / 4
+        let indicatorWidth: CGFloat  = self.stepIndicatorsContainer.frame.width / CGFloat(self.stepIndicatorsView.count)
         
-        stepsIndicator.forEach { (stepIndicatorView: StepIndicatorView) in
-            
-            self.stepsIndicatorStackView.addArrangedSubview(stepIndicatorView)
-            
-            stepIndicatorView.activateConstraint()
-            stepIndicatorView.stepBarIndicatorWidth.update(offset: indicatorWidth)
+        self.step1Indicator.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.width.equalTo(indicatorWidth - 10)
+            make.height.equalTo(60.0)
+            make.leading.equalToSuperview().offset(5.0)
         }
+        
+        self.step2Indicator.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+            make.width.equalTo(indicatorWidth - 10)
+            make.height.equalTo(60.0)
+            make.leading.equalTo(self.step1Indicator.snp.trailing).offset(5.0)
+        }
+        
+        self.step3Indicator.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+            make.width.equalTo(indicatorWidth - 10)
+            make.height.equalTo(60.0)
+            make.leading.equalTo(self.step2Indicator.snp.trailing).offset(5.0)
+        }
+        
+        self.step4Indicator.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.width.equalTo(indicatorWidth - 10)
+            make.height.equalTo(60.0)
+            make.leading.equalTo(self.step3Indicator.snp.trailing).offset(5.0)
+        }
+        
+        
+        
     }
 }
