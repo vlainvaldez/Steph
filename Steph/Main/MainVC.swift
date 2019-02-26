@@ -90,7 +90,7 @@ extension MainVC: UICollectionViewDataSource {
                         for: indexPath
                         ) as? Step1Cell
                     
-                    else { return UICollectionViewCell() }
+                    else { return UICollectionViewCell() }                
                 return cell
                 
             case .mobileVerification:

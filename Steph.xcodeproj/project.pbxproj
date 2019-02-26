@@ -47,6 +47,7 @@
 /* Begin PBXFileReference section */
 		42431DCD6678F60AB0B31BBA /* Pods-StephUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephUITests.debug.xcconfig"; path = "Target Support Files/Pods-StephUITests/Pods-StephUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		549DC13664AAB11EFC43296A /* Pods-Steph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steph.release.xcconfig"; path = "Target Support Files/Pods-Steph/Pods-Steph.release.xcconfig"; sourceTree = "<group>"; };
+		781167971532C69A0B57792C /* Pods-StephTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StephTests/Pods-StephTests.debug.xcconfig"; sourceTree = "<group>"; };
 		816B3AE0221F8DA500F55B12 /* Steph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		816B3AE3221F8DA500F55B12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		816B3AE5221F8DA500F55B12 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -68,13 +69,18 @@
 		816B3B24221F9A4B00F55B12 /* Step4Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step4Cell.swift; sourceTree = "<group>"; };
 		816B3B27221F9B2600F55B12 /* CellStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStep.swift; sourceTree = "<group>"; };
 		816B3B38221FFB9A00F55B12 /* StepIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepIndicatorView.swift; sourceTree = "<group>"; };
+		8B4F840BC64474F5E78FA1C3 /* Pods-StephTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StephTests/Pods-StephTests.release.xcconfig"; sourceTree = "<group>"; };
 		91B43F1E487F25C0B9DD3441 /* Pods-StephUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephUITests.release.xcconfig"; path = "Target Support Files/Pods-StephUITests/Pods-StephUITests.release.xcconfig"; sourceTree = "<group>"; };
 		97B4515154617097E3EF771A /* Pods-Steph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steph.debug.xcconfig"; path = "Target Support Files/Pods-Steph/Pods-Steph.debug.xcconfig"; sourceTree = "<group>"; };
+		9859F4C7439B226D8CA31A8A /* Pods-Steph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steph.release.xcconfig"; path = "Pods/Target Support Files/Pods-Steph/Pods-Steph.release.xcconfig"; sourceTree = "<group>"; };
+		CF4B96FE77F8DB59538691D5 /* Pods-StephUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StephUITests/Pods-StephUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6568930D023A78A33DC34CC /* Pods-StephTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephTests.release.xcconfig"; path = "Target Support Files/Pods-StephTests/Pods-StephTests.release.xcconfig"; sourceTree = "<group>"; };
 		F43C70164087AAA0F8714BFF /* Pods_StephTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StephTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C18323FD9FB75724888BB7 /* Pods_StephUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StephUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A49130E685EBA88EF656BE /* Pods-StephUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StephUITests/Pods-StephUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F90D1BE648FCE45722BE1282 /* Pods_Steph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Steph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB17892D615208496EEFC66 /* Pods-StephTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StephTests.debug.xcconfig"; path = "Target Support Files/Pods-StephTests/Pods-StephTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC7FCB07769992913CEDFC56 /* Pods-Steph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Steph.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Steph/Pods-Steph.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,12 @@
 				D6568930D023A78A33DC34CC /* Pods-StephTests.release.xcconfig */,
 				42431DCD6678F60AB0B31BBA /* Pods-StephUITests.debug.xcconfig */,
 				91B43F1E487F25C0B9DD3441 /* Pods-StephUITests.release.xcconfig */,
+				FC7FCB07769992913CEDFC56 /* Pods-Steph.debug.xcconfig */,
+				9859F4C7439B226D8CA31A8A /* Pods-Steph.release.xcconfig */,
+				781167971532C69A0B57792C /* Pods-StephTests.debug.xcconfig */,
+				8B4F840BC64474F5E78FA1C3 /* Pods-StephTests.release.xcconfig */,
+				CF4B96FE77F8DB59538691D5 /* Pods-StephUITests.debug.xcconfig */,
+				F6A49130E685EBA88EF656BE /* Pods-StephUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -391,7 +403,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Steph/Pods-Steph-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Steph/Pods-Steph-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -402,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Steph/Pods-Steph-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Steph/Pods-Steph-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C839A3C1050203A487D01D7 /* [CP] Check Pods Manifest.lock */ = {
@@ -657,13 +669,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N36VWJBV53;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
 				INFOPLIST_FILE = Steph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Steph;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Stephs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,13 +688,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N36VWJBV53;
+				DEVELOPMENT_TEAM = 3S4MHP69HY;
 				INFOPLIST_FILE = Steph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Steph;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hero.Stephs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
